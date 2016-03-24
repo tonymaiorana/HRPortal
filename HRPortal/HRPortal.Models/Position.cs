@@ -8,5 +8,7 @@ namespace HRPortal.Models
 {
     public class Position
     {
+        public string Title { get; set; }
+        public int PositionID { get; set; }
     }
 }

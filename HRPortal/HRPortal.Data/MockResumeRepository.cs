@@ -20,21 +20,39 @@ namespace HRPortal.Data
                     new Resume
                     {
                         ResumeID = 1,
-                        FirstName = "Goo",
-                        LastName = "Frob",
+                        Applicant = new Person()
+                        {
+                            FirstName = "Bobby",
+                            LastName = "Bobberson",
+                            BirthDay = new DateTime(1988, 08, 25)
+                            
+                        },
+                        Education = Education.Bootcamp,
                         DateCreated = DateTime.Today,
                         DateUpdated = DateTime.Today,
-                        ApplyingPosition = null,
+                        ApplyingPosition = new Position()
+                        {
+                            Title = "CEO"
+                        },
                         ResumeFile = null
                     },
                     new Resume
                      {
                         ResumeID = 2,
-                        FirstName = "Doooo",
-                        LastName = "Man",
+                        Applicant = new Person()
+                        {
+                            FirstName = "Johnny",
+                            LastName = "Walker",
+                            BirthDay = new DateTime(1987, 07, 22)
+
+                        },
+                        Education = Education.HighSchool,
                         DateCreated = DateTime.Today,
                         DateUpdated = DateTime.Today,
-                        ApplyingPosition = null,
+                        ApplyingPosition = new Position()
+                        {
+                            Title = "Software Engineer"
+                        },
                         ResumeFile = null
                     }
                 });
