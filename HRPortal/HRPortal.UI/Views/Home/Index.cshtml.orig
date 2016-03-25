@@ -2,7 +2,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>ETT Prestige WorldWide</h2>
+<<<<<<< HEAD
+@*todo apply is taking you to the list not a new form page*@
+=======
+>>>>>>> cd8660da0b4e1973a3d3b8f4a154e39e4bd9ef5f
 <h2>ETT Prestige WorldWide</h2>
 
 <div class="bg"></div>

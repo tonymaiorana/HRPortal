@@ -7,10 +7,23 @@ using System.Threading.Tasks;
 
 namespace HRPortal.Models
 {
-    public class Resume //todo: :IValidatableObject
+<<<<<<< HEAD
+    public class Resume : IValidatableObject
     {
         public Person Applicant { get; set; }
+
+        //[DataType(DataType.Date)]
         public DateTime DateCreated { get; set; }
+
+        //[DataType(DataType.Date)]
+=======
+    public class Resume :IValidatableObject
+    {
+        public Person Applicant { get; set; }
+        [DataType(DataType.DateTime)]
+        public DateTime DateCreated { get; set; }
+        [DataType(DataType.DateTime)]
+>>>>>>> cd8660da0b4e1973a3d3b8f4a154e39e4bd9ef5f
         public DateTime DateUpdated { get; set; }
 
         public Position ApplyingPosition { get; set; }
@@ -21,6 +34,12 @@ namespace HRPortal.Models
         public Education Education { get; set; }
         public JobExperience JobExperience { get; set; }
         //todo: refrences??
+<<<<<<< HEAD
+
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            throw new NotImplementedException();
+=======
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
             List<ValidationResult> errors = new List<ValidationResult>();
@@ -28,6 +47,7 @@ namespace HRPortal.Models
             //not sure what to do here
             return errors;
 
+>>>>>>> cd8660da0b4e1973a3d3b8f4a154e39e4bd9ef5f
         }
     }
 }
