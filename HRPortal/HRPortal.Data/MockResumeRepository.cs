@@ -24,7 +24,7 @@ namespace HRPortal.Data
                         {
                             FirstName = "Bobby",
                             LastName = "Bobberson",
-                            BirthDay = new DateTime(1988, 08, 25),
+                            Birthday = new DateTime(1988, 08, 25),
                             Email = "BobbyBobberson@gmail.com",
                             PhoneNumber = "(764) 904 - 4444"
                             
@@ -45,7 +45,7 @@ namespace HRPortal.Data
                             Address = null,
                             PreviousManager = new Person()
                             {
-                                BirthDay = new DateTime(1997,09,07),
+                                Birthday = new DateTime(1997,09,07),
                                 Email = "youknowme@gmail.com",
                                 FirstName = "Tim",
                                 LastName = "Timmies",
@@ -61,7 +61,7 @@ namespace HRPortal.Data
                         {
                             FirstName = "Johnny",
                             LastName = "Walker",
-                            BirthDay = new DateTime(1987,07,02),
+                            Birthday = new DateTime(1987,07,02),
                             Email = null,
                             PhoneNumber = "(764) 777 - 7777"
                         },
@@ -80,7 +80,7 @@ namespace HRPortal.Data
                             Address = null,
                             PreviousManager = new Person()
                             {
-                                BirthDay = new DateTime(1945,08,03),
+                                Birthday = new DateTime(1945,08,03),
                                 Email = "thisistheBoom@gmail.com",
                                 FirstName = "Roger",
                                 LastName = "Mager",

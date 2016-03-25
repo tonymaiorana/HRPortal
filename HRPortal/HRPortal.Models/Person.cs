@@ -13,10 +13,11 @@ namespace HRPortal.Models
         public string LastName { get; set; }
         [DataType(DataType.PhoneNumber)]
         public string PhoneNumber { get; set; }
+        public Address Address { get; set; }
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
         [DataType(DataType.Date)]
-        public DateTime BirthDay { get; set; }
+        public DateTime Birthday { get; set; }
 
 
        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
@@ -36,9 +37,9 @@ namespace HRPortal.Models
                 errors.Add(new ValidationResult("Please Enter a valid phone number in the format of (###)###-####", new []{"PhoneNumber"}));
             }
 
-            if (DateTime.Now < BirthDay)
+            if (DateTime.Now < Birthday)
             {
-                errors.Add(new ValidationResult("Please enter a valid Birthday", new[] { "BirthDay" }));
+                errors.Add(new ValidationResult("Please enter a valid Birthday", new[] { "Birthday" }));
             }
 
            if (string.IsNullOrEmpty(Email))
