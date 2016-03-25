@@ -24,15 +24,33 @@ namespace HRPortal.Data
                         {
                             FirstName = "Bobby",
                             LastName = "Bobberson",
-                            BirthDay = new DateTime(1988, 08, 25)
+                            BirthDay = new DateTime(1988, 08, 25),
+                            Email = "BobbyBobberson@gmail.com",
+                            PhoneNumber = "(764) 904 - 4444"
                             
                         },
+                        
                         Education = Education.Bootcamp,
                         DateCreated = DateTime.Today,
                         DateUpdated = DateTime.Today,
                         ApplyingPosition = new Position()
                         {
                             Title = "CEO"
+                        },
+                        JobExperience = new JobExperience()
+                        {
+                            Company = "Joes stuff and what not",
+                            StartDate = new DateTime(1997,02,20),
+                            EndDate = new DateTime(1988,06,09),
+                            Address = null,
+                            PreviousManager = new Person()
+                            {
+                                BirthDay = new DateTime(1997,09,07),
+                                Email = "youknowme@gmail.com",
+                                FirstName = "Tim",
+                                LastName = "Timmies",
+                                PhoneNumber = "875-777-8888"
+                            }
                         },
                         ResumeFile = null
                     },
@@ -43,8 +61,9 @@ namespace HRPortal.Data
                         {
                             FirstName = "Johnny",
                             LastName = "Walker",
-                            BirthDay = new DateTime(1987, 07, 22)
-
+                            BirthDay = new DateTime(1987,07,02),
+                            Email = null,
+                            PhoneNumber = "(764) 777 - 7777"
                         },
                         Education = Education.HighSchool,
                         DateCreated = DateTime.Today,
@@ -52,6 +71,21 @@ namespace HRPortal.Data
                         ApplyingPosition = new Position()
                         {
                             Title = "Software Engineer"
+                        },
+                          JobExperience = new JobExperience()
+                        {
+                            Company = "kroger",
+                            StartDate = new DateTime(1994,09,04),
+                            EndDate = new DateTime(1999,09,08),
+                            Address = null,
+                            PreviousManager = new Person()
+                            {
+                                BirthDay = new DateTime(1945,08,03),
+                                Email = "thisistheBoom@gmail.com",
+                                FirstName = "Roger",
+                                LastName = "Mager",
+                                PhoneNumber = "875-999-2222"
+                            }
                         },
                         ResumeFile = null
                     }

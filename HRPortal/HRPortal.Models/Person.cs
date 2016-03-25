@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace HRPortal.Models
 {
-   public class Person
+   public class Person //todo :IValidatableObject
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
+        //[DataType(DataType.Date)]
         public DateTime BirthDay { get; set; }
     }
 }

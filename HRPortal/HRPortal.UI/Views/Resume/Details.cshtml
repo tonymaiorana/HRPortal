@@ -10,6 +10,52 @@
     <h4>Resume</h4>
     <hr />
     <dl class="dl-horizontal">
+        @*todo: distigish the applicant header or take it out*@
+        @*todo: all the dates will be fix when we imploment the IValadatableObjects on the pages*@
+        <dt>
+            @Html.DisplayNameFor(model => model.Applicant)
+        </dt>
+        <dd></dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Applicant.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Applicant.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Applicant.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Applicant.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Applicant.BirthDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Applicant.BirthDay)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Applicant.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Applicant.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Applicant.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Applicant.PhoneNumber)
+        </dd>
+        <p>
+
+
+        </p>
+
         <dt>
             @Html.DisplayNameFor(model => model.DateCreated)
         </dt>
@@ -25,6 +71,110 @@
         <dd>
             @Html.DisplayFor(model => model.DateUpdated)
         </dd>
+        <p>
+
+
+        </p>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplyingPosition.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplyingPosition.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Education)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Education)
+        </dd>
+        <p>
+
+
+        </p>
+        <dt>
+            @Html.DisplayNameFor(model => model.JobExperience.Company)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobExperience.Company)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JobExperience.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobExperience.StartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JobExperience.EndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobExperience.EndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JobExperience.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobExperience.Address)
+        </dd>
+        <p>
+
+
+        </p>
+
+        @*todo: Make distigished*@
+        <dt>
+            @Html.DisplayNameFor(model => model.JobExperience.PreviousManager)
+        </dt>
+
+        <dd>
+
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobExperience.PreviousManager.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobExperience.PreviousManager.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JobExperience.PreviousManager.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobExperience.PreviousManager.LastName)
+        </dd>
+        @*when will you ever need to know the previous employers b-day??*@
+        @*<dt>
+            @Html.DisplayNameFor(model => model.JobExperience.PreviousManager.BirthDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobExperience.PreviousManager.BirthDay)
+        </dd>*@
+        <dt>
+            @Html.DisplayNameFor(model => model.JobExperience.PreviousManager.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobExperience.PreviousManager.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JobExperience.PreviousManager.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobExperience.PreviousManager.PhoneNumber)
+        </dd>
+
+        @*todo: place button here that displays the resumefile*@
 
     </dl>
 </div>
