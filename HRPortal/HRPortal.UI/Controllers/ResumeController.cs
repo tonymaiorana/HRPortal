@@ -38,5 +38,10 @@ namespace HRPortal.UI.Controllers
         {
             return View("Index");
         }
+
+        public ActionResult Details(int id)
+        {
+            return View();
+        }
     }
 }

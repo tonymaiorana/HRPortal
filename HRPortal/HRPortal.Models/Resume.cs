@@ -21,13 +21,13 @@ namespace HRPortal.Models
         public Education Education { get; set; }
         public JobExperience JobExperience { get; set; }
         //todo: refrences??
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        {
-            List<ValidationResult> errors = new List<ValidationResult>();
+        //public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        //{
+        //    List<ValidationResult> errors = new List<ValidationResult>();
 
-            //not sure what to do here
-            return errors;
+        //    //not sure what to do here
+        //    return errors;
 
-        }
+        //}
     }
 }
