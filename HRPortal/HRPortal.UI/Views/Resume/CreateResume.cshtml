@@ -8,49 +8,62 @@
 {
     <fieldset>
         <legend>Application</legend>
+        @Html.ValidationSummary()
         <div class="form-group">
             <label class="col md-4 control-label">First Name:</label>
             @Html.TextBoxFor(m => m.newResume.Applicant.FirstName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.newResume.Applicant.FirstName)
         </div>
         <div class="form-group">
             <label class="col md-4 control-label">Last Name:</label>
             @Html.TextBoxFor(m => m.newResume.Applicant.LastName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.newResume.Applicant.LastName)
         </div>
         <div class="form-group">
             <label class="col md-4 control-label">Street Address:</label>
             @Html.TextBoxFor(m => m.newResume.Applicant.Address.Street, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.newResume.Applicant.Address.Street)
         </div>
         <div class="form-group">
             <label class="col md-4 control-label">City:</label>
             @Html.TextBoxFor(m => m.newResume.Applicant.Address.City, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.newResume.Applicant.Address.City)
         </div>
         <div class="form-group">
             <label class="col md-4 control-label">State:</label>
             @Html.TextBoxFor(m => m.newResume.Applicant.Address.State, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.newResume.Applicant.Address.State)
         </div>
         <div class="form-group">
             <label class="col md-4 control-label">Zip Code:</label>
             @Html.TextBoxFor(m => m.newResume.Applicant.Address.ZipCode, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.newResume.Applicant.Address.ZipCode)
         </div>
         <div class="form-group">
             <label class="col md-4 control-label">Email:</label>
             @Html.TextBoxFor(m => m.newResume.Applicant.Email, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.newResume.Applicant.Email)
         </div>
         <div class="form-group">
             <label class="col md-4 control-label">Phone Number:</label>
             @Html.TextBoxFor(m => m.newResume.Applicant.PhoneNumber, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.newResume.Applicant.PhoneNumber)
         </div>
         <div class="form-group">
+            @*need a drop down birthday*@
             <label class="col md-4 control-label">Birthday:</label>
-            @Html.TextBoxFor(m => m.newResume.Applicant.Birthday, new { @class = "form-control" })
+            @Html.TextBoxFor(m => m.newResume.Applicant.Birthday, new {@class = "form-control"})
+            @Html.ValidationMessageFor(m => m.newResume.Applicant.Birthday)
         </div>
         <div class="form-group">
             <label class="col md-4 control-label">Highest Level of Education:</label>
             @Html.DropDownListFor(m => m.newResume.Education, Model.Education)
+            @Html.ValidationMessageFor(m => m.newResume.Education)
         </div>
         <div class="form-group">
             <label class="col md-4 control-label">Position Applying For:</label>
             @Html.DropDownListFor(m => m.AvailablePositions, Model.AvailablePositions)
+            @Html.ValidationMessageFor(m => m.AvailablePositions)
         </div>
 
         <button class="btn-group">Submit</button>

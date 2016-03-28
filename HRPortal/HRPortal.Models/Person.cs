@@ -30,7 +30,7 @@ namespace HRPortal.Models
             }
             if (string.IsNullOrEmpty(LastName))
             {
-                errors.Add(new ValidationResult("Please enter a valid last name", new[] { "FirstName" }));
+                errors.Add(new ValidationResult("Please enter a valid last name", new[] { "LastName" }));
             }
             if (string.IsNullOrEmpty(PhoneNumber))
             {

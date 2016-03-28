@@ -36,7 +36,15 @@ namespace HRPortal.UI.Controllers
         [HttpPost]
         public ActionResult CreateResume(Resume newResume)
         {
-            return View("Index");
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+            var vm = new ResumeVM(new MockPositionRepository().GetAllPositions())
+            {
+                newResume = newResume
+            };
+            return View(vm);
         }
 
         public ActionResult Details(int id)
