@@ -14,11 +14,10 @@ namespace HRPortal.UI
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-
             routes.MapRoute(
                 name: "AdminAccess",
                 url: "Admin",
-                defaults: new {controoler = "Resume", action = "Details"}
+                defaults: new { controller = "Resume", action = "Details" }
                 );
 
             routes.MapRoute(
@@ -26,8 +25,6 @@ namespace HRPortal.UI
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
-
-
         }
     }
 }

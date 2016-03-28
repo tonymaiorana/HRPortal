@@ -6,11 +6,10 @@
 
 <h2>Index</h2>
 
-
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(m=>m.ResumeID)
+            @Html.DisplayNameFor(m => m.ResumeID)
         </th>
         <th>
             @Html.DisplayNameFor(m => m.Applicant.FirstName)
@@ -27,29 +26,30 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(i => item.ResumeID)
-        </td>
-        <td>
-            @Html.DisplayFor(i => item.Applicant.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(i => item.Applicant.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateCreated)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateUpdated)
-        </td>
-        <td>
-            @Html.ActionLink("Edit","Edit", new {id = item.ResumeID}) |
-            @Html.ActionLink("Details", "Details", new {id = item.ResumeID}) |
-            @Html.ActionLink("Delete", "Delete", new {id = item.ResumeID})
-        </td>
-    </tr>
-}
-
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(i => item.ResumeID)
+            </td>
+            <td>
+                @Html.DisplayFor(i => item.Applicant.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(i => item.Applicant.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCreated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateUpdated)
+            </td>
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new {id = item.ResumeID}) |
+                    @Html.ActionLink("Details", "Details", new {id = item.ResumeID}) |
+                    @Html.ActionLink("Delete", "Delete", new {id = item.ResumeID})*@
+            </td>
+        </tr>
+    }
 </table>
+
