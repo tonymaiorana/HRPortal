@@ -14,7 +14,8 @@ namespace HRPortal.UI.Controllers
         // GET: Resume
         public ActionResult Index()
         {
-            return View();
+            var repo = new MockResumeRepository();
+            return View(repo.GetAllResumes());
         }
 
         public ActionResult CreateResume()
@@ -38,6 +39,10 @@ namespace HRPortal.UI.Controllers
         {
             if (ModelState.IsValid)
             {
+                var resumeVM = new MockResumeRepository();
+                newResume.DateCreated = DateTime.Now;
+                newResume.DateUpdated = DateTime.Now;
+                resumeVM.Add(newResume);
                 return RedirectToAction("Index");
             }
             var vm = new ResumeVM(new MockPositionRepository().GetAllPositions())
@@ -46,6 +51,32 @@ namespace HRPortal.UI.Controllers
             };
             return View(vm);
         }
+
+        public ActionResult EditResume(int editResumeID)
+        {
+            return View(new ResumeVM(new MockPositionRepository().GetAllPositions())
+            {
+                newResume = new MockResumeRepository().GetByID(editResumeID)
+            });
+        }
+
+        [HttpPost]
+        public ActionResult EditResume(Resume newResume)
+        {
+            if (ModelState.IsValid)
+            {
+                var resumeVM = new MockResumeRepository();
+                newResume.DateUpdated = DateTime.Now;
+                resumeVM.Add(newResume);
+                return RedirectToAction("Index");
+            }
+            var vm = new ResumeVM(new MockPositionRepository().GetAllPositions())
+            {
+                newResume = newResume
+            };
+            return View(vm);
+        }
+
 
         public ActionResult Details(int id)
         {

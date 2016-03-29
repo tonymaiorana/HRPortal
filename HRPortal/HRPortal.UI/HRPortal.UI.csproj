@@ -167,6 +167,7 @@
     <Content Include="Views\Resume\SubmitResumeFilePopOut.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Resume\CreateResume.cshtml" />
+    <Content Include="Views\Resume\EditResume.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
