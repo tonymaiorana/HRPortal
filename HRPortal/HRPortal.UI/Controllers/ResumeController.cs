@@ -52,11 +52,11 @@ namespace HRPortal.UI.Controllers
             return View(vm);
         }
 
-        public ActionResult EditResume(int editResumeID)
+        public ActionResult EditResume(int id)
         {
             return View(new ResumeVM(new MockPositionRepository().GetAllPositions())
             {
-                newResume = new MockResumeRepository().GetByID(editResumeID)
+                newResume = new MockResumeRepository().GetByID(id)
             });
         }
 

@@ -24,18 +24,23 @@ namespace HRPortal.Data
                         {
                             FirstName = "Bobby",
                             LastName = "Bobberson",
-                            Birthday = new DateTime(1988, 08, 25),
+                            Address = new Address()
+                            {
+                                Street = "1800 Ding Dong Ln",
+                                City = "Las Vegas",
+                                State = "NV",
+                                ZipCode = "44455",
+                            },
                             Email = "BobbyBobberson@gmail.com",
-                            PhoneNumber = "(764) 904 - 4444"
-                            
-                        },
-                        
+                            PhoneNumber = "(764) 904 - 4444",
+                            Birthday = new DateTime(1988, 08, 25),      
+                        },                      
                         Education = Education.Bootcamp,
-                        DateCreated = DateTime.Today,
-                        DateUpdated = DateTime.Today,
+                        DateCreated = DateTime.Now,
+                        DateUpdated = DateTime.Now,
                         ApplyingPosition = new Position()
                         {
-                            Title = "CEO"
+                            Title = "Database Engineer"
                         },
                         JobExperience = new JobExperience()
                         {

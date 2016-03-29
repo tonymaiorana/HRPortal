@@ -17,9 +17,9 @@ namespace HRPortal.UI.Models
         public ResumeVM(List<Position> availablePositions)
         {
             AvailablePositions = new List<SelectListItem>();
-            foreach (var position in availablePositions)
+            foreach (Position position in availablePositions)
             {
-                SelectListItem jobTitles = new SelectListItem() { Text = position.Title, Value = position.ToString() };
+                SelectListItem jobTitles = new SelectListItem() { Text = position.Title, Value = position.PositionID.ToString() };
                 AvailablePositions.Add(jobTitles);
             }
 
