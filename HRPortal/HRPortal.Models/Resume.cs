@@ -7,27 +7,28 @@ using System.Threading.Tasks;
 
 namespace HRPortal.Models
 {
-    public class Resume //todo: :IValidatableObject
+    public class Resume :IValidatableObject
     {
         public Person Applicant { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateUpdated { get; set; }
 
+        [Required (ErrorMessage = "Please select the position you are applying for. ")]
         public Position ApplyingPosition { get; set; }
         //not sure how to validate
         public object ResumeFile { get; set; }
         public int ResumeID { get; set; }
-        
+
+        [Required (ErrorMessage = "How Smart are you?")]
         public Education Education { get; set; }
         public JobExperience JobExperience { get; set; }
         //todo: refrences??
-        //public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        //{
-        //    List<ValidationResult> errors = new List<ValidationResult>();
 
-        //    //not sure what to do here
-        //    return errors;
-
-        //}
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            List<ValidationResult> errors = new List<ValidationResult>();
+            //if (ApplyingPosition isVal)
+            return null;
+        }
     }
 }
