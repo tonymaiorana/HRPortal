@@ -40,8 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IPolicyInterFace.cs" />
     <Compile Include="IPositionRepository.cs" />
     <Compile Include="IResumeRepository.cs" />
+    <Compile Include="MockPolicyRepo.cs" />
     <Compile Include="MockPositionRepository.cs" />
     <Compile Include="MockResumeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
