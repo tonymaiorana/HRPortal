@@ -2,18 +2,13 @@
     ViewBag.Title = "Index";
 }
 
-<h2>ETT Prestige WorldWide</h2>
-
-<div class="bg"></div>
-<div class="jumbotron">
-    <div class="row" align="right">
-        <a href="~/Resume/CreateResume" class="btn btn-success">Start Your Career With Us Today!</a>
-    </div>
-    <div class="row">
-        <div class="col-lg-4">
-            <img src="~/Content/Images/Pineapple.jpg" class="img">
-        </div>
+<div class="row container-fluid">
+    <div class="col-lg-12">
+        <img src="~/Content/Images/PWW.jpg" class="img img-responsive" style="margin: 0 auto 0 auto">
     </div>
 </div>
-
-<!-- End of JumboTron -->
+@section scripts {
+    <script>
+        $('body').animate({ paddingLeft: '0px' });
+    </script>
+}
