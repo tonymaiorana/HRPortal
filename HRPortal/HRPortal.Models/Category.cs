@@ -9,5 +9,6 @@ namespace HRPortal.Models
     public class Category
     {
         public string CategoryTitle { get; set; }
+        public int CategoryID { get; set; }
     }
 }
