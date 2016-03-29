@@ -31,11 +31,11 @@
             @Html.DisplayFor(model => model.Applicant.LastName)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Applicant.BirthDay)
+            @Html.DisplayNameFor(model => model.Applicant.Birthday)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Applicant.BirthDay)
+            @Html.DisplayFor(model => model.Applicant.Birthday)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Applicant.Email)
@@ -179,6 +179,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ResumeID }) |
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.ResumeID }) |*@
     @Html.ActionLink("Back to List", "Index")
 </p>
