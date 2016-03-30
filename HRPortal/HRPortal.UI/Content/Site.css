@@ -52,3 +52,7 @@ textarea {
     list-style-type: square;
     color: #f00;
 }
+
+.tonybg {
+    background-image: url('~/Content/Images/CreateResumeBackGround.jpg')  !important;
+}

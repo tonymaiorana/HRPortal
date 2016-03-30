@@ -26,10 +26,10 @@ namespace HRPortal.UI.Models
             Education = new List<SelectListItem>();
             foreach (var education in Enum.GetValues(typeof(Education)))
             {
-                string fuckADuck = Regex.Replace(education.ToString(), @"(\B[A-Z]|[0-9]+)", " $1");
+                string levelOfEducation = Regex.Replace(education.ToString(), @"(\B[A-Z]|[0-9]+)", " $1");
                 SelectListItem educationLevel = new SelectListItem()
                 {
-                    Text = fuckADuck,
+                    Text = levelOfEducation,
                     Value = education.ToString()
                 };
                 Education.Add(educationLevel);

@@ -24,7 +24,7 @@ namespace HRPortal.UI.Controllers
             {
                 Applicant = new Person { Address = new Address() },
                 ApplyingPosition = new Position(),
-                JobExperience = new JobExperience(),
+                JobExperience = new List<JobExperience>() {new JobExperience()},
                 ResumeFile = new object(),
             };
 
@@ -37,13 +37,22 @@ namespace HRPortal.UI.Controllers
         [HttpPost]
         public ActionResult CreateResume(Resume newResume)
         {
+            if (Request.Form.AllKeys.Contains("MoreJobExperience"))
+            {
+                newResume.JobExperience.Add(new JobExperience());
+                return View(new ResumeVM(new MockPositionRepository().GetAllPositions())
+                {
+                    newResume = newResume
+                });
+            }
+
             if (ModelState.IsValid)
             {
-                var resumeVM = new MockResumeRepository();
+                var repo = new MockResumeRepository();
                 newResume.DateCreated = DateTime.Now;
                 newResume.DateUpdated = DateTime.Now;
-                resumeVM.Add(newResume);
-                return RedirectToAction("Index");
+                repo.Add(newResume);
+                return View("Index", repo.GetAllResumes());
             }
             var vm = new ResumeVM(new MockPositionRepository().GetAllPositions())
             {

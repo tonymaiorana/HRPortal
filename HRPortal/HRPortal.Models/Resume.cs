@@ -13,7 +13,7 @@ namespace HRPortal.Models
         {
             this.ApplyingPosition = new Position();
             this.Applicant = new Person();
-            this.JobExperience = new JobExperience();
+            this.JobExperience = new List<JobExperience>();
         }
         public Person Applicant { get; set; }
         public DateTime DateCreated { get; set; }
@@ -26,7 +26,7 @@ namespace HRPortal.Models
 
         [Required (ErrorMessage = "How Smart are you?")]
         public Education Education { get; set; }
-        public JobExperience JobExperience { get; set; }
+        public List<JobExperience> JobExperience { get; set; }
         //todo: refrences??
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
