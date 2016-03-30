@@ -1,4 +1,4 @@
-﻿@model HRPortal.Data.MockPolicyRepo
+﻿@model IEnumerable<HRPortal.Models.Category> 
 
 @{
     ViewBag.Title = "Index";
@@ -6,12 +6,37 @@
 
 <h2>Index</h2>
 
-@*create a new category button on top*@
+<h1>Policy Categories</h1>
+@*TODO: create a new category button on top*@
+
 @*create table to display category list*@
-<h1>Categories</h1>
-<table class="table">
-    <thead>
-    <th>ID</th>
-    <th>Policy</th>
-    </thead>
-</table>
+<div class="col-sm-12">
+    <table class="table">
+
+        <thead>
+        <tr>
+        <th>@Html.DisplayNameFor(c => c.CategoryID)</th>
+        <th>@Html.DisplayNameFor(c => c.CategoryTitle)</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                   @Html.DisplayFor(i => item.CategoryID)
+                </td>
+                <td>
+                    @Html.DisplayFor(i => item.CategoryTitle)
+                </td>
+                <td>
+                    @Html.ActionLink("Policy", "Policy", new {id = item.CategoryID})
+                    @Html.ActionLink("Delete","Delete",new {id = item.CategoryID})
+                    @Html.ActionLink("Edit","Edit",new {id = item.CategoryID})
+                 </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

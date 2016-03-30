@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using HRPortal.Data;
 using HRPortal.Models;
 
 namespace HRPortal.UI.Controllers
@@ -12,23 +13,42 @@ namespace HRPortal.UI.Controllers
         // GET: Category
         public ActionResult Index()
         {
-            return View();
+            var repo = new MockPolicyRepo();
+            return View(repo.GetAllCategories());
         }
 
-        public ActionResult CreateCategory()
-        {
-            return View();
-        }
+        ////TODO: Need help with what to return in the view
+        //public ActionResult CreateCategory()
+        //{
+        //    Category c = new Category()
+        //    {
+        //        //TODO:need help with id incroment
+        //        CategoryID = new int(),
+        //        CategoryTitle = new string()
+        //    };
+        //    return View(new categoryVM(new MockPolicyRepo().GetAllCategories())
+        //    {
+        //        newCategory = c
+        //    });
+        //}
 
-        [HttpPost]
-        public ActionResult CreateCategory(Category newCategory)
-        {
-            if (ModelState.IsValid)
-            {
-                return RedirectToAction("Index");
-            }
-            //needs finished
-            return View( /*need to finish*/);
-        }
+        //[HttpPost]
+        //public ActionResult CreateCategory(Category newCategory)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var categoryVM = new MockPolicyRepo();
+        //        categoryVM.AddCategory(newCategory);
+        //        return RedirectToAction("Index");
+        //    }
+           
+        //    return View();
+        //}
+
+        //TODO: add edit for category
+        //TODO: add delete for category
+        //TODO: add rederct to policy list for an individual category?? idk if it gos on this page
+
+
     }
 }
