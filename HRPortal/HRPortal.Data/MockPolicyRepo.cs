@@ -24,7 +24,7 @@ namespace HRPortal.Data
             if (!_policies.Any())
             {
                 _policies.Add(new Policy(_categories.FirstOrDefault()) { Content = "You must wear pants", Title = "The golden rule", PolicyID = 1 });
-                _policies.Add(new Policy(_categories.FirstOrDefault()) { Content = "You must wear pants (assless chaps don't count as pant)", Title = "The golden rule 2.0", PolicyID = 2 });
+                _policies.Add(new Policy(_categories.FirstOrDefault()) { Content = "You must wear pants and shirts", Title = "The golden rule 2.0", PolicyID = 2 });
                 _policies.Add(new Policy(_categories.LastOrDefault()) { Content = "You must park inside the lines", Title = "How to park", PolicyID = 3 });
             }
         }

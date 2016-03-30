@@ -34,9 +34,9 @@
                     <li class="dropdown" style="margin: 5px;">
                         <a href="#" class="dropdown-toggle" style="border-radius: 5px;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Policies <span class="caret"></span></a>
                         <ul class="dropdown-menu" style="border-radius: 5px;">
-                            <li><a href="#">View Policies</a></li>
+                            <li>@Html.ActionLink("View Policies", "Index", "Policy")</li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#">Manage Policies</a></li>
+                            <li>@Html.ActionLink("Manage Policies", "ManagePolicies", "Policy")</li>
                             <li role="separator" class="divider"></li>
                             <li><a href="#">Manage Categories</a></li>
                         </ul>

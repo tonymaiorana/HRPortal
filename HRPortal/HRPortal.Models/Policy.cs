@@ -13,6 +13,11 @@ namespace HRPortal.Models
         public string Content { get; set; }
         public int PolicyID { get; set; }
 
+        public Policy()
+        {
+            Category = new Category { CategoryID = 0, CategoryTitle = "Default" };
+        }
+
         public Policy(Category c)
         {
             Category = c;

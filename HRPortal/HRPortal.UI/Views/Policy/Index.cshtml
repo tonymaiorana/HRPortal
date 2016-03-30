@@ -1,0 +1,27 @@
+﻿@using HRPortal.Models
+@model List<HRPortal.Models.Policy>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Policy Index</h2>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Policy Category</th>
+                <th>Policy Title</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Policy p in Model)
+            {
+                <tr>
+                    <td>@p.Category.CategoryTitle</td>
+                    <!--Make Title a link to display a single policy or a pop out-->
+                    <td>@p.Title</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
