@@ -1,15 +1,16 @@
 ﻿@model HRPortal.UI.Models.ResumeVM
+
 @{
-    ViewBag.Title = "CreateResume";
+    ViewBag.Title = "EditResume";
 }
 <div class="container">
-    <h2>So You Want to Work For Us?</h2>
-    @using (Html.BeginForm("CreateResume", "Resume", FormMethod.Post, new { @class = "form-horizontal" }))
+    <h2>Edit Resume</h2>
+    @using (Html.BeginForm("EditResume", "Resume", FormMethod.Post, new {@class = "form-horizontal"}))
     {
 
         <fieldset>
-            <legend>Application</legend>
-            @Html.ValidationSummary()
+            <legend>Edit Your Resume</legend>
+            @Html.ValidationSummary(true)
             <div class="col-lg-6">
                 <div class="form-group">
                     <label class="col md-4 control-label">First Name:</label>
@@ -65,8 +66,8 @@
                 </div>
                 <div class="form-group">
                     <label class="col md-4 control-label">Position Applying For:</label>
-                    @Html.DropDownListFor( m=> m.newResume.ApplyingPosition.PositionID,Model.AvailablePositions)
-                    @Html.ValidationMessageFor(m => m.newResume.ApplyingPosition)
+                    @Html.DropDownListFor(m => m.AvailablePositions, Model.AvailablePositions)
+                    @Html.ValidationMessageFor(m => m.AvailablePositions)
                 </div>
             </div>
         </fieldset>
@@ -75,3 +76,4 @@
         </div>
     }
 </div>
+

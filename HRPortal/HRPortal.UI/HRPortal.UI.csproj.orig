@@ -169,12 +169,15 @@
     <Content Include="Views\Resume\SubmitResumeFilePopOut.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Resume\CreateResume.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Policy\Index.cshtml" />
     <Content Include="Views\Policy\CreatePolicy.cshtml" />
-    <Content Include="Views\Category\CreateCategory.cshtml" />
-    <Content Include="Views\Category\Index.cshtml" />
     <Content Include="Views\Policy\EditPolicy.cshtml" />
     <Content Include="Views\Policy\ManagePolicies.cshtml" />
+=======
+    <Content Include="Views\Category\CreateCategory.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+>>>>>>> d8c0ed379e6fe3b591e9be583a80b81c6b7e0c82
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

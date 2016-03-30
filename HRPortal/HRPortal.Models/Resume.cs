@@ -9,11 +9,16 @@ namespace HRPortal.Models
 {
     public class Resume :IValidatableObject
     {
+        public Resume()
+        {
+            this.ApplyingPosition = new Position();
+            this.Applicant = new Person();
+            this.JobExperience = new JobExperience();
+        }
         public Person Applicant { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateUpdated { get; set; }
 
-        [Required (ErrorMessage = "Please select the position you are applying for. ")]
         public Position ApplyingPosition { get; set; }
         //not sure how to validate
         public object ResumeFile { get; set; }
