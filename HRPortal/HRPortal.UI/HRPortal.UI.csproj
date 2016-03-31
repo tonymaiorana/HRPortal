@@ -152,6 +152,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CategoryVM.cs" />
     <Compile Include="Models\ResumeVM.cs" />
     <Compile Include="Models\SubmitResumeVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -171,11 +172,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Policy\Index.cshtml" />
     <Content Include="Views\Policy\CreatePolicy.cshtml" />
-    <Content Include="Views\Category\CreateCategory.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
     <Content Include="Views\Policy\EditPolicy.cshtml" />
     <Content Include="Views\Policy\ManagePolicies.cshtml" />
     <Content Include="Views\Resume\CreateResume.cshtml" />
+    <Content Include="Views\Category\CreateCategory.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
