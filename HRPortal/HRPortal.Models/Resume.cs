@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HRPortal.Models
 {
-    public class Resume :IValidatableObject
+    public class Resume //:IValidatableObject
     {
         public Resume()
         {
@@ -29,11 +29,11 @@ namespace HRPortal.Models
         public List<JobExperience> JobExperience { get; set; }
         //todo: refrences??
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        {
-            List<ValidationResult> errors = new List<ValidationResult>();
-            //if (ApplyingPosition isVal)
-            return null;
-        }
+        //public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        //{
+        //    List<ValidationResult> errors = new List<ValidationResult>();
+        //    //if (ApplyingPosition isVal)
+        //    return null;
+        //}
     }
 }

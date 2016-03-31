@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HRPortal.Models
 {
-   public class Person :IValidatableObject
+   public class Person  :IValidatableObject
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -20,8 +20,8 @@ namespace HRPortal.Models
         public DateTime Birthday { get; set; }
 
 
-       public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-       {
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
             List<ValidationResult> errors = new List<ValidationResult>();
 
             if (string.IsNullOrEmpty(FirstName))
@@ -34,7 +34,7 @@ namespace HRPortal.Models
             }
             if (string.IsNullOrEmpty(PhoneNumber))
             {
-                errors.Add(new ValidationResult("Please Enter a valid phone number in the format of (###)###-####", new []{"PhoneNumber"}));
+                errors.Add(new ValidationResult("Please Enter a valid phone number in the format of (###)###-####", new[] { "PhoneNumber" }));
             }
 
             if (DateTime.Now < Birthday)
@@ -42,12 +42,12 @@ namespace HRPortal.Models
                 errors.Add(new ValidationResult("Please enter a valid Birthday", new[] { "Birthday" }));
             }
 
-           if (string.IsNullOrEmpty(Email))
-           {
-               errors.Add(new ValidationResult("Please enter a valid E-Mail (ex: billybob@gmail.com)", new[] {"Email"} ));
-           }
-           return errors;
+            if (string.IsNullOrEmpty(Email))
+            {
+                errors.Add(new ValidationResult("Please enter a valid E-Mail (ex: billybob@gmail.com)", new[] { "Email" }));
+            }
+            return errors;
 
-       }
+        }
     }
 }

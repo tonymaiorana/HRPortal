@@ -52,7 +52,7 @@ namespace HRPortal.UI.Controllers
                 newResume.DateCreated = DateTime.Now;
                 newResume.DateUpdated = DateTime.Now;
                 repo.Add(newResume);
-                return View("Index", repo.GetAllResumes());
+                return RedirectToAction("Index");
             }
             var vm = new ResumeVM(new MockPositionRepository().GetAllPositions())
             {
