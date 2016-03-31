@@ -5,6 +5,7 @@
 }
 
 <h1>Policy Categories</h1>
+<p> </p>
 
 @*@new category button on top*@
 @Html.ActionLink("New Category","CreateCategory","Category",null,new {@class = "btn btn-success"})
@@ -31,7 +32,7 @@
                     @*not linking to right index*@
                     @Html.ActionLink("view Policies", "Index") |
                     @Html.ActionLink("Delete", "Delete", new {id = item.CategoryID}) |
-                    @Html.ActionLink("Edit", "Edit", new {id = item.CategoryID}) |
+                    @Html.ActionLink("Edit", "CreateCategory", new {id = item.CategoryID}) |
                     @Html.ActionLink("Add New Policy", "CreatePolicy", "Policy")
                 </td>
             </tr>

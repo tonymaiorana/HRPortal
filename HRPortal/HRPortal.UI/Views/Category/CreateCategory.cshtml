@@ -4,7 +4,7 @@
     ViewBag.Title = "CreateCategory";
 }
 
-<h2>CreateCategory</h2>
+<h2>Create Category</h2>
 
 
 @using (Html.BeginForm()) 
@@ -23,7 +23,8 @@
         <div class="form-group">
             <div class="col-lg-12 col-lg-offset-0">
                 <input type="submit" value="Save"/>
-                @Html.ActionLink("Cancle", "CreateCategory", "Category", null, new { @class = "btn btn-success" })
+
+                @Html.ActionLink("Cancel", "Index")
             </div>
         </div>
     </div>
