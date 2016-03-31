@@ -33,8 +33,8 @@ namespace HRPortal.Data
                             },
                             Email = "BobbyBobberson@gmail.com",
                             PhoneNumber = "(764) 904 - 4444",
-                            Birthday = new DateTime(1988, 08, 25),      
-                        },                      
+                            Birthday = new DateTime(1988, 08, 25),
+                        },
                         Education = Education.Bootcamp,
                         DateCreated = DateTime.Now,
                         DateUpdated = DateTime.Now,
@@ -42,20 +42,18 @@ namespace HRPortal.Data
                         {
                             Title = "Database Engineer"
                         },
-                        JobExperience = new JobExperience()
+                        JobExperience = new List<JobExperience>()
                         {
-                            Company = "Joes stuff and what not",
-                            StartDate = new DateTime(1997,02,20),
-                            EndDate = new DateTime(1988,06,09),
-                            Address = null,
-                            PreviousManager = new Person()
+                            new JobExperience()
                             {
-                                Birthday = new DateTime(1997,09,07),
-                                Email = "youknowme@gmail.com",
-                                FirstName = "Tim",
-                                LastName = "Timmies",
-                                PhoneNumber = "875-777-8888"
+                                Company = "Joes stuff and what not",
+                                 StartDate = new DateTime(1997,02,20),
+                                 EndDate = new DateTime(1988,06,09),
+                                 Address = null,
+                                 PreviousManager = "John Boy",
+                                 ContactNumber = "4403332222"
                             }
+
                         },
                         ResumeFile = null
                     },
@@ -77,20 +75,18 @@ namespace HRPortal.Data
                         {
                             Title = "Software Engineer"
                         },
-                          JobExperience = new JobExperience()
+                        JobExperience = new List<JobExperience>()
                         {
-                            Company = "kroger",
-                            StartDate = new DateTime(1994,09,04),
-                            EndDate = new DateTime(1999,09,08),
-                            Address = null,
-                            PreviousManager = new Person()
+                            new JobExperience()
                             {
-                                Birthday = new DateTime(1945,08,03),
-                                Email = "thisistheBoom@gmail.com",
-                                FirstName = "Roger",
-                                LastName = "Mager",
-                                PhoneNumber = "875-999-2222"
+                                Company = "The Software Guild",
+                                 StartDate = new DateTime(1998,03,31),
+                                 EndDate = new DateTime(2001,08,09),
+                                 Address = null,
+                                 PreviousManager = "John Boy",
+                                 ContactNumber = "2203302214"
                             }
+
                         },
                         ResumeFile = null
                     }

@@ -19,7 +19,8 @@ namespace HRPortal.Models
         //what if they still work there???
 
         public Address Address { get; set; }
-        public Person PreviousManager { get; set; }
+        public string PreviousManager { get; set; }
+        public string ContactNumber { get; set; }
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
             List<ValidationResult> errors = new List<ValidationResult>();
