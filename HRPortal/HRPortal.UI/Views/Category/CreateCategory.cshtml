@@ -6,3 +6,33 @@
 
 <h2>CreateCategory</h2>
 
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label class="col-lg-12" for="CategoryTitle">Category Name</label>
+            <div class="col-lg-12">
+                <input id="CategoryTitle" name="CategoryTitle" type="text" placeholder="New Category Name" class="form-control input-lg" required=""/>
+            </div>
+        </div>
+    </div>
+    <div class="form-horizontal">
+        <div class="form-group">
+            <div class="col-lg-12 col-lg-offset-0">
+                <input type="submit" value="Save"/>
+                @Html.ActionLink("Cancle", "CreateCategory", "Category", null, new { @class = "btn btn-success" })
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
