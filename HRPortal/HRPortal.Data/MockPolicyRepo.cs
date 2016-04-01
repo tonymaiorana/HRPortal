@@ -41,7 +41,7 @@ namespace HRPortal.Data
 
         public List<Policy> GetAllPoliciesForCategory(Category c)
         {
-            return _policies.FindAll(p => p.Category.CategoryID == c.CategoryID).ToList();
+            return _policies.FindAll(p => p.CategoryID == c.CategoryID).ToList();
         }
 
         public Policy GetPolicyByID(int ID)

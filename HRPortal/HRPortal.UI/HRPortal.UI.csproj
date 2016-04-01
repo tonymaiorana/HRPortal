@@ -153,6 +153,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CategoryVM.cs" />
+    <Compile Include="Models\PolicyVM.cs" />
     <Compile Include="Models\ResumeVM.cs" />
     <Compile Include="Models\SubmitResumeVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

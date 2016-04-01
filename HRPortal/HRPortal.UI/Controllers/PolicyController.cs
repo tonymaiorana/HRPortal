@@ -1,5 +1,6 @@
 ﻿using HRPortal.Data;
 using HRPortal.Models;
+using HRPortal.UI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,13 +20,16 @@ namespace HRPortal.UI.Controllers
 
         public ActionResult CreatePolicy()
         {
-            return View();
+            return View(new PolicyVM(new MockPolicyRepo().GetAllCategories()) { Policy = new Policy() });
         }
 
         [HttpPost]
         public ActionResult CreatePolicy(Policy policy)
         {
-            return View();
+            var repo = new MockPolicyRepo();
+            policy.Category = repo.GetCategoryByID(policy.CategoryID);
+            repo.AddPolicy(policy);
+            return View("Index", repo.GetAllPolicies());
         }
 
         public ActionResult EditPolicy()
