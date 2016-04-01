@@ -38,7 +38,40 @@ namespace HRPortal.UI.Controllers
             return View();
         }
 
-        //TODO: add edit for category
+        public ActionResult DeleteCategory(int id)
+        {
+            var categoryVM = new MockPolicyRepo();
+            var cat = categoryVM.GetCategoryByID(id);
+            return View(cat);
+        }
+
+        [HttpPost]
+
+        public ActionResult DeleteCategory(Category category)
+        {
+           
+                var categoryVM = new MockPolicyRepo();
+                categoryVM.DeleteCategory(category);
+                return RedirectToAction("Index");
+            
+        }
+
+        public ActionResult EditCategory(int id)
+        {
+            var categoryVM = new MockPolicyRepo();
+            var cat = categoryVM.GetCategoryByID(id);
+            return View(cat);
+        }
+
+        [HttpPost]
+        public ActionResult EditCategory(Category category)
+        {
+           
+                var categoryVM = new MockPolicyRepo();
+                categoryVM.EditCategory(category);
+                return RedirectToAction("Index");
+            
+        }
         //TODO: add delete for category
         //TODO: add rederct to policy list for an individual category?? idk if it gos on this page
         //TODO: add policy

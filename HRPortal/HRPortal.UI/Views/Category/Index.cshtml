@@ -30,9 +30,9 @@
                 </td>
                 <td>
                     @*not linking to right index*@
-                    @Html.ActionLink("view Policies", "Index") |
-                    @Html.ActionLink("Delete", "Delete", new {id = item.CategoryID}) |
-                    @Html.ActionLink("Edit", "CreateCategory", new {id = item.CategoryID}) |
+                    @Html.ActionLink("view Policies", "Index", "Policy") |
+                    @Html.ActionLink("Delete", "DeleteCategory", new {id = item.CategoryID}) |
+                    @Html.ActionLink("Edit", "EditCategory", new { id = item.CategoryID }) |
                     @Html.ActionLink("Add New Policy", "CreatePolicy", "Policy")
                 </td>
             </tr>

@@ -177,6 +177,8 @@
     <Content Include="Views\Policy\ManagePolicies.cshtml" />
     <Content Include="Views\Resume\CreateResume.cshtml" />
     <Content Include="Views\Category\CreateCategory.cshtml" />
+    <Content Include="Views\Category\DeleteCategory.cshtml" />
+    <Content Include="Views\Category\EditCategory.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
