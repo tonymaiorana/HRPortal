@@ -11,112 +11,112 @@
             @Html.ValidationSummary(true)
 
             <div class="form-group">
-                @Html.LabelFor(m => m.newResume.Applicant.FirstName, new { @class = "control-label" })
-                @Html.EditorFor(m => m.newResume.Applicant.FirstName, new { @class = "form-control" })
+                @Html.LabelFor(m => m.newResume.Applicant.FirstName,new { @class = "control-label" })
+                @Html.EditorFor(m => m.newResume.Applicant.FirstName, new { HtmlAttributes = new { @class = "form-control" }})
                 @Html.ValidationMessageFor(m => m.newResume.Applicant.FirstName)
             </div>
             <div class="form-group">
                 @Html.LabelFor(m => m.newResume.Applicant.LastName, new { @class = "control-label" })
-                @Html.EditorFor(m => m.newResume.Applicant.LastName, new { @class = "form-control" })
+                @Html.EditorFor(m => m.newResume.Applicant.LastName, new { HtmlAttributes = new { @class = "form-control" }})
                 @Html.ValidationMessageFor(m => m.newResume.Applicant.LastName)
             </div>
             <div class="form-group">
                 @Html.LabelFor(m => m.newResume.Applicant.Address.Street, new { @class = "control-label" })
-                @Html.EditorFor(m => m.newResume.Applicant.Address.Street, new { @class = "form-control" })
+                @Html.EditorFor(m => m.newResume.Applicant.Address.Street, new { HtmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(m => m.newResume.Applicant.Address.Street)
             </div>
             <div class="form-group">
                 @Html.LabelFor(m => m.newResume.Applicant.Address.City, new { @class = "control-label" })
-                @Html.EditorFor(m => m.newResume.Applicant.Address.City, new { @class = "form-control" })
+                @Html.EditorFor(m => m.newResume.Applicant.Address.City, new { HtmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(m => m.newResume.Applicant.Address.City)
             </div>
             <div class="form-group">
                 @Html.LabelFor(m => m.newResume.Applicant.Address.State, new { @class = "control-label" })
-                @Html.EditorFor(m => m.newResume.Applicant.Address.State, new { @class = "form-control" })
+                @Html.EditorFor(m => m.newResume.Applicant.Address.State, new { HtmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(m => m.newResume.Applicant.Address.State)
             </div>
             <div class="form-group">
                 @Html.LabelFor(m => m.newResume.Applicant.Address.ZipCode, new { @class = "control-label" })
-                @Html.EditorFor(m => m.newResume.Applicant.Address.ZipCode, new { @class = "form-control" })
+                @Html.EditorFor(m => m.newResume.Applicant.Address.ZipCode, new { HtmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(m => m.newResume.Applicant.Address.ZipCode)
             </div>
             <div class="form-group">
                 @Html.LabelFor(m => m.newResume.Applicant.Email, new { @class = "control-label" })
-                @Html.EditorFor(m => m.newResume.Applicant.Email, new { @class = "form-control" })
+                @Html.EditorFor(m => m.newResume.Applicant.Email, new { HtmlAttributes = new { @class = "form-control" }})
                 @Html.ValidationMessageFor(m => m.newResume.Applicant.Email)
             </div>
             <div class="form-group">
                 @Html.LabelFor(m => m.newResume.Applicant.PhoneNumber, new { @class = "control-label" })
-                @Html.EditorFor(m => m.newResume.Applicant.PhoneNumber, new { @class = "form-control" })
+                @Html.EditorFor(m => m.newResume.Applicant.PhoneNumber, new { HtmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(m => m.newResume.Applicant.PhoneNumber)
             </div>
             <div class="form-group">
                 @Html.LabelFor(m => m.newResume.Applicant.Birthday, new { @class = "control-label" })
-                @Html.EditorFor(m => m.newResume.Applicant.Birthday, new { @class = "form-control" })
+                @Html.EditorFor(m => m.newResume.Applicant.Birthday, new { HtmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(m => m.newResume.Applicant.Birthday)
             </div>
             <div class="form-group">
                 @Html.LabelFor(m => m.newResume.Education, new { @class = "control-label" })
-                @Html.DropDownListFor(m => m.newResume.Education, Model.Education)
+                @Html.DropDownListFor(m => m.newResume.Education, Model.Education, new { HtmlAttributes = new { @class = "form-control" }})
                 @Html.ValidationMessageFor(m => m.newResume.Education)
             </div>
             <div class="form-group">
                 @Html.LabelFor(m => m.newResume.ApplyingPosition.PositionID, new { @class = "control-label" })
-                @Html.DropDownListFor(m => m.newResume.ApplyingPosition.PositionID, Model.AvailablePositions)
+                @Html.DropDownListFor(m => m.newResume.ApplyingPosition.PositionID, Model.AvailablePositions, new { HtmlAttributes = new {@class = "form-control" } })
                 @Html.ValidationMessageFor(m => m.newResume.ApplyingPosition)
             </div>
             @for (int i = 0; i < Model.newResume.JobExperience.Count; i++)
                 {
                     <div class="form-group">
                         @Html.LabelFor(m => m.newResume.JobExperience[i].Company, new { @class = "control-label" })
-                        @Html.EditorFor(m => m.newResume.JobExperience[i].Company, new { @class = "form-control" })
+                        @Html.EditorFor(m => m.newResume.JobExperience[i].Company, new { HtmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(m => m.newResume.JobExperience[i].Company)
                     </div>
 
                     <div class="form-group">
                         @Html.LabelFor(m => m.newResume.JobExperience[i].StartDate, new { @class = "control-label" })
-                        @Html.EditorFor(m => m.newResume.JobExperience[i].StartDate, new { @class = "form-control" })
+                        @Html.EditorFor(m => m.newResume.JobExperience[i].StartDate, new { HtmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(m => m.newResume.JobExperience[i].StartDate)
                     </div>
 
                     <div class="form-group">
                         @Html.LabelFor(m => m.newResume.JobExperience[i].EndDate, new { @class = "control-label" })
-                        @Html.EditorFor(m => m.newResume.JobExperience[i].EndDate, new { @class = "form-control" })
+                        @Html.EditorFor(m => m.newResume.JobExperience[i].EndDate, new { HtmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(m => m.newResume.JobExperience[i].EndDate)
                     </div>
 
                     <div class="form-group">
                         @Html.LabelFor(m => m.newResume.JobExperience[i].PreviousManager, new { @class = "control-label" })
-                        @Html.EditorFor(m => m.newResume.JobExperience[i].PreviousManager, new { @class = "form-control" })
+                        @Html.EditorFor(m => m.newResume.JobExperience[i].PreviousManager, new { HtmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(m => m.newResume.JobExperience[i].PreviousManager)
                     </div>
 
                     <div class="form-group">
                         @Html.LabelFor(m => m.newResume.JobExperience[i].ContactNumber, new { @class = "control-label" })
-                        @Html.EditorFor(m => m.newResume.JobExperience[i].ContactNumber, new { @class = "form-control" })
+                        @Html.EditorFor(m => m.newResume.JobExperience[i].ContactNumber, new { HtmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(m => m.newResume.JobExperience[i].ContactNumber)
                     </div>
 
                     <div class="form-group">
                         @Html.LabelFor(m => m.newResume.JobExperience[i].Address.Street, new { @class = "control-label" })
-                        @Html.EditorFor(m => m.newResume.JobExperience[i].Address.Street, new { @class = "form-control" })
+                        @Html.EditorFor(m => m.newResume.JobExperience[i].Address.Street, new { HtmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(m => m.newResume.JobExperience[i].Address.Street)
                     </div>
 
                     <div class="form-group">
                         @Html.LabelFor(m => m.newResume.JobExperience[i].Address.City, new { @class = "control-label" })
-                        @Html.EditorFor(m => m.newResume.JobExperience[i].Address.City, new { @class = "form-control" })
+                        @Html.EditorFor(m => m.newResume.JobExperience[i].Address.City, new { HtmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(m => m.newResume.JobExperience[i].Address.City)
                     </div>
 
                     <div class="form-group">
                         @Html.LabelFor(m => m.newResume.JobExperience[i].Address.State, new { @class = "control-label" })
-                        @Html.EditorFor(m => m.newResume.JobExperience[i].Address.State, new { @class = "form-control" })
+                        @Html.EditorFor(m => m.newResume.JobExperience[i].Address.State, new { HtmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(m => m.newResume.JobExperience[i].Address.State)
                     </div>
                     <div class="form-group">
                         @Html.LabelFor(m => m.newResume.JobExperience[i].Address.ZipCode, new { @class = "control-label" })
-                        @Html.EditorFor(m => m.newResume.JobExperience[i].Address.ZipCode, new { @class = "form-control" })
+                        @Html.EditorFor(m => m.newResume.JobExperience[i].Address.ZipCode, new { HtmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(m => m.newResume.JobExperience[i].Address.ZipCode)
                     </div>
                     <button name="MoreJobExperience">More Job Experience</button>
