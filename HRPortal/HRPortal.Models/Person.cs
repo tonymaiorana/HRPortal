@@ -17,6 +17,7 @@ namespace HRPortal.Models
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
         [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime Birthday { get; set; }
 
 

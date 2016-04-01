@@ -180,6 +180,7 @@
     <Content Include="Views\Category\CreateCategory.cshtml" />
     <Content Include="Views\Category\DeleteCategory.cshtml" />
     <Content Include="Views\Category\EditCategory.cshtml" />
+    <Content Include="Views\Resume\EditResume.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
