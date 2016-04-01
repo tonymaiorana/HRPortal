@@ -91,5 +91,13 @@ namespace HRPortal.UI.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult DeleteResume(int id)
+        {
+            var resumeVM = new MockResumeRepository();
+            resumeVM.Delete(id);
+            return View("Index", resumeVM.GetAllResumes());
+        }
     }
 }
