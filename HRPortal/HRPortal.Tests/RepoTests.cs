@@ -8,15 +8,15 @@ using NUnit.Framework;
 
 namespace HRPortal.Tests
 {
-    [TestFixture]
-    public RepoTests
-    {
-        [Test]
-        public void CanLoadResumes()
-        {
-            var repo = new ResumeRepository();
+    //[TestFixture]
+    //public RepoTests
+    //{
+    //    [Test]
+    //    public void CanLoadResumes()
+    //    {
+           
 
         
-        }
-    }
+    //    }
+    //}
 }
