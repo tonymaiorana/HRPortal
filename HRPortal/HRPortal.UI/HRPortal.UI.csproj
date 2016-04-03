@@ -192,6 +192,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="DataFiles\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HRPortal.BLL\HRPortal.BLL.csproj">
