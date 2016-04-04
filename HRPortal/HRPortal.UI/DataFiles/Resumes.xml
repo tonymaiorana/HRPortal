@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfResume xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Resume>
+    <Applicant>
+      <FirstName>Timothy</FirstName>
+      <LastName>Mueller</LastName>
+      <PhoneNumber>2624080383</PhoneNumber>
+      <Address>
+        <Street>34360 VALLEY RD</Street>
+        <City>Oconomowoc</City>
+        <State>Wisconsin</State>
+        <ZipCode>53066</ZipCode>
+      </Address>
+      <Email>timothyjonmueller@gmail.com</Email>
+      <Birthday>1992-03-03T00:00:00</Birthday>
+    </Applicant>
+    <DateCreated>2016-04-03T21:46:46.798041-04:00</DateCreated>
+    <DateUpdated>2016-04-03T21:46:46.798041-04:00</DateUpdated>
+    <ApplyingPosition>
+      <PositionID>0</PositionID>
+    </ApplyingPosition>
+    <ResumeID>1</ResumeID>
+    <Education>HighSchool</Education>
+    <JobExperience>
+      <JobExperience>
+        <Company>h</Company>
+        <StartDate>1996-03-03T00:00:00</StartDate>
+        <EndDate>1999-12-19T00:00:00</EndDate>
+        <Address>
+          <Street>g</Street>
+          <City>k</City>
+          <State>g</State>
+          <ZipCode>g</ZipCode>
+        </Address>
+        <PreviousManager>h</PreviousManager>
+        <ContactNumber>hgk</ContactNumber>
+      </JobExperience>
+    </JobExperience>
+  </Resume>
+</ArrayOfResume>

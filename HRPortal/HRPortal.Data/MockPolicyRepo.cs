@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HRPortal.Data
 {
-    public class MockPolicyRepo : IPolicyInterFace
+    public class MockPolicyRepo : IPolicyInterFace, ICategoryinterface
     {
         private List<Category> _categories = new List<Category>();
         private List<Policy> _policies = new List<Policy>();
@@ -16,11 +16,10 @@ namespace HRPortal.Data
         {
             if (!_categories.Any())
             {
-                _categories.Add(new Category {CategoryID = 1, CategoryTitle = "Dress Code"});
-                _categories.Add(new Category {CategoryID = 2, CategoryTitle = "Drug Testing"});
-                _categories.Add(new Category {CategoryID = 3, CategoryTitle = "Parking Etiquette"});
+                _categories.Add(new Category { CategoryID = 1, CategoryTitle = "Dress Code" });
+                _categories.Add(new Category { CategoryID = 2, CategoryTitle = "Drug Testing" });
+                _categories.Add(new Category { CategoryID = 3, CategoryTitle = "Parking Etiquette" });
             }
-        
 
             if (!_policies.Any())
             {
@@ -30,15 +29,15 @@ namespace HRPortal.Data
             }
         }
 
-         public List<Category> GetAllCategories()
+        public List<Category> GetAllCategories()
         {
             return _categories;
         }
+
         public Category GetCategoryByID(int ID)
         {
             return _categories.FirstOrDefault(c => c.CategoryID == ID);
         }
-
 
         public List<Policy> GetAllPolicies()
         {
@@ -54,8 +53,6 @@ namespace HRPortal.Data
         {
             return _policies.FirstOrDefault(p => p.PolicyID == ID);
         }
-
-        
 
         public void DeletePolicy(Policy p)
         {
@@ -84,6 +81,7 @@ namespace HRPortal.Data
             DeletePolicy(p);
             _policies.Add(p);
         }
+
         public void DeleteCategory(Category c)
         {
             _categories.RemoveAll(l => l.CategoryID == c.CategoryID);
@@ -105,11 +103,11 @@ namespace HRPortal.Data
             }
             _categories.Add(c);
         }
+
         public void EditCategory(Category c)
         {
             DeleteCategory(c);
             _categories.Add(c);
         }
-    
     }
 }

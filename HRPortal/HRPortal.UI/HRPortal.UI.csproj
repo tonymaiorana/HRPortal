@@ -123,6 +123,7 @@
     <Content Include="Content\Images\PWW.jpg" />
     <Content Include="Content\Images\CreateResumeBackGround.jpg" />
     <Content Include="Content\Site.css" />
+    <Content Include="DataFiles\Resumes.xml" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
@@ -183,6 +184,7 @@
     <Content Include="Views\Category\DeleteCategory.cshtml" />
     <Content Include="Views\Category\EditCategory.cshtml" />
     <Content Include="Views\Resume\EditResume.cshtml" />
+    <Content Include="Views\Resume\Success.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -192,7 +194,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="DataFiles\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HRPortal.BLL\HRPortal.BLL.csproj">

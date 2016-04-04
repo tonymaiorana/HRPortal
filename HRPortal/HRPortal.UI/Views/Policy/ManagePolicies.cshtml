@@ -1,5 +1,32 @@
-﻿@{
+﻿@using HRPortal.Models
+@model List<HRPortal.Models.Policy>
+@{
     ViewBag.Title = "ManagePolicies";
 }
 
 <h2>Manage Policies</h2>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Policy Category</th>
+                <th>Policy Title</th>
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Policy p in Model)
+            {
+                <tr>
+                    <td>@p.Category.CategoryTitle</td>
+                    <!--Make Title a link to display a single policy or a pop out-->
+                    <td>@p.Title</td>
+                    <td>
+                        @Html.ActionLink("Edit", "EditPolicy", "Policy", new { id = p.PolicyID }, null) |
+                        @Html.ActionLink("Delete", "DeletePolicy", "Policy", new { id = p.PolicyID }, null)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

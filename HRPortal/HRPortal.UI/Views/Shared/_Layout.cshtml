@@ -30,17 +30,19 @@
                     {
                         <li style="margin: 5px;"><a href="~/Resume/Index" style="border-radius: 5px;">Apply <span class="glyphicon glyphicon-thumbs-up"></span></a></li>
                     }
-
-                    <li class="dropdown" style="margin: 5px;">
-                        <a href="#" class="dropdown-toggle" style="border-radius: 5px;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Policies <span class="caret"></span></a>
-                        <ul class="dropdown-menu" style="border-radius: 5px;">
-                            <li>@Html.ActionLink("View Policies", "Index", "Policy")</li>
-                            <li role="separator" class="divider"></li>
-                            <li>@Html.ActionLink("Manage Policies", "ManagePolicies", "Policy")</li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Manage Categories</a></li>
-                        </ul>
-                    </li>
+                    @if (ctrName.ToLower() != "resumecreateresume")
+                    {
+                        <li class="dropdown" style="margin: 5px;">
+                            <a href="#" class="dropdown-toggle" style="border-radius: 5px;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Policies <span class="caret"></span></a>
+                            <ul class="dropdown-menu" style="border-radius: 5px;">
+                                <li>@Html.ActionLink("View Policies", "Index", "Policy")</li>
+                                <li role="separator" class="divider"></li>
+                                <li>@Html.ActionLink("Manage Policies", "ManagePolicies", "Policy")</li>
+                                <li role="separator" class="divider"></li>
+                                <li>@Html.ActionLink("Manage Categories", "Index", "Category")</li>
+                            </ul>
+                        </li>
+                    }
                 </ul>
                 @if (!this.Request.Url.ToString().Contains("CreateResume"))
                 {

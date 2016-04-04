@@ -1,11 +1,11 @@
-﻿using System;
+﻿using HRPortal.Data;
+using HRPortal.Models;
+using HRPortal.UI.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using HRPortal.Data;
-using HRPortal.Models;
-using HRPortal.UI.Models;
 
 namespace HRPortal.UI.Controllers
 {
@@ -14,7 +14,7 @@ namespace HRPortal.UI.Controllers
         // GET: Resume
         public ActionResult Index()
         {
-            var repo = new MockResumeRepository();
+            var repo = new ResumeRepo();
             return View(repo.GetAllResumes());
         }
 
@@ -24,7 +24,7 @@ namespace HRPortal.UI.Controllers
             {
                 Applicant = new Person { Address = new Address() },
                 ApplyingPosition = new Position(),
-                JobExperience = new List<JobExperience>() {new JobExperience()},
+                JobExperience = new List<JobExperience>() { new JobExperience() },
                 ResumeFile = new object(),
             };
 
@@ -48,11 +48,11 @@ namespace HRPortal.UI.Controllers
 
             if (ModelState.IsValid)
             {
-                var repo = new MockResumeRepository();
+                var repo = new ResumeRepo();
                 newResume.DateCreated = DateTime.Now;
                 newResume.DateUpdated = DateTime.Now;
                 repo.Add(newResume);
-                return RedirectToAction("Index");
+                return View("Success");
             }
             var vm = new ResumeVM(new MockPositionRepository().GetAllPositions())
             {
@@ -85,7 +85,6 @@ namespace HRPortal.UI.Controllers
             };
             return View(vm);
         }
-
 
         public ActionResult Details(int id)
         {

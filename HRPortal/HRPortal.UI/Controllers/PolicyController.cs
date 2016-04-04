@@ -32,20 +32,33 @@ namespace HRPortal.UI.Controllers
             return View("Index", repo.GetAllPolicies());
         }
 
-        public ActionResult EditPolicy()
+        public ActionResult EditPolicy(int id)
         {
-            return View();
+            Policy policy = new MockPolicyRepo().GetPolicyByID(id);
+            return View(new PolicyVM(new MockPolicyRepo().GetAllCategories()) { Policy = policy });
         }
 
         [HttpPost]
-        public ActionResult EditPolicy(Policy policy)
+        public ActionResult EditPolicyPost(Policy policy)
         {
-            return View();
+            var repo = new MockPolicyRepo();
+            policy.Category = repo.GetCategoryByID(policy.CategoryID);
+            repo.EditPolicy(policy);
+            return View("Index", repo.GetAllPolicies());
         }
 
         public ActionResult ManagePolicies()
         {
-            return View();
+            var repo = new MockPolicyRepo();
+            return View(repo.GetAllPolicies());
+        }
+
+        public ActionResult DeletePolicy(int id)
+        {
+            Policy policy = new MockPolicyRepo().GetPolicyByID(id);
+            var repo = new MockPolicyRepo();
+            repo.DeletePolicy(policy);
+            return View("Index", repo.GetAllPolicies());
         }
     }
 }

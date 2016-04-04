@@ -1,5 +1,32 @@
-﻿@{
+﻿@model HRPortal.UI.Models.PolicyVM
+@{
     ViewBag.Title = "EditPolicy";
 }
 
 <h2>Edit Policy</h2>
+
+@using (Html.BeginForm("EditPolicyPost", "Policy", FormMethod.Post, new { @class = "form-vertical" }))
+{
+    <div class="container">
+        <fieldset class="form-vertical">
+            <legend>Policy</legend>
+            @Html.ValidationSummary(true)
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Policy.CategoryID, new { @class = "control-label" })
+                @Html.DropDownListFor(m => m.Policy.CategoryID, Model.Categories, Model.Policy.CategoryID)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Policy.Title, new { @class = "control-label" })
+                @Html.EditorFor(m => m.Policy.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.Policy.Title)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Policy.Content, new { @class = "control-label" })
+                @Html.EditorFor(m => m.Policy.Content, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.Policy.Content)
+            </div>
+            <button class="btn btn-success">Add Policy</button>
+        </fieldset>
+    </div>
+}

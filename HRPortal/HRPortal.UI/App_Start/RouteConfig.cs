@@ -15,6 +15,12 @@ namespace HRPortal.UI
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Applicant",
+                url: "Apply",
+                defaults: new { controller = "Resume", action = "CreateResume" }
+                );
+
+            routes.MapRoute(
                 name: "AdminAccess",
                 url: "Admin",
                 defaults: new { controller = "Resume", action = "Details" }
